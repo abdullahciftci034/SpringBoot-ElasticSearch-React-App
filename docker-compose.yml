@@ -22,13 +22,13 @@ services:
     depends_on:
       - elasticsearchapp
   reactapp:
-    build: ./react_app
+    build: ./react_apps
     ports:
       - '80:3000'
     networks:
       - my_network
     volumes:
-      - ./react_app/react_app:/react_app
+      - ./react_apps/react_app:/react_app
 networks:
   my_network:  # Uygulama konteynerleri arasında bir ağ oluşturur
     driver: bridge
