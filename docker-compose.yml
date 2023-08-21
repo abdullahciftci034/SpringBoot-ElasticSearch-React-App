@@ -19,8 +19,6 @@ services:
       - my_network
     volumes:
       - ./springboot_app/springboot-elasticsearch:/home/springboot-elasticsearch
-    depends_on:
-      - elasticsearchapp
   reactapp:
     build: ./react_apps
     ports:
